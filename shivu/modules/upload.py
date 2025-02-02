@@ -8,7 +8,7 @@ from shivu import application, collection, db, CHARA_CHANNEL_ID, SUPPORT_CHAT
 WRONG_FORMAT_TEXT = """Wrong ❌️ format...  eg. /upload Img_url muzan-kibutsuji Demon-slayer 3
 img_url character-name anime-name rarity-number
 use rarity number accordingly rarity Map
-rarity_map =  1:🔵 𝙇𝙊𝙒, 2:🟢 𝙈𝙀𝘿𝙄𝙐𝙈, 3:🔴 𝙃𝙄𝙂𝙃, 4:🟡 𝙉𝙊𝘽𝙀L, 5:🥵 𝙉𝙐𝘿𝙀𝙎, 6:🔮 𝙇𝙄𝙈𝙄𝙏𝙀𝘿, 7:💋 𝘾𝙊𝙎𝙋𝙇𝘼𝙔 [𝙇], 8:⚫️ [𝙓] 𝙑𝙚𝙧𝙨𝙚, 9:🎭 𝙀𝙍𝙊𝙏𝙄𝘾, 10:🍑 𝙎𝙪𝙡𝙩𝙧𝙮"""
+rarity_map =  1:⛩️ LOW, 2:🍁 RARE, 3:🔴 MEDIUM, 4:🟡 HIGH, 5:🥵 EROTIC, 6:🔮 𝙇𝙄𝙈𝙄𝙏𝙀𝘿, 7:🎐 CELESTIAL , 8:🧬 [x] Verse, 9:🌤️ SUMMER, 10:💝 VALENTINE"""
 
 async def get_next_sequence_number(sequence_name):
     sequence_collection = db.sequences
@@ -50,9 +50,9 @@ async def upload(update: Update, context: CallbackContext) -> None:
         return
 
     rarity_map = {
-        1: "🔵 𝙇𝙊𝙒", 2: "🟢 𝙈𝙀𝘿𝙄𝙐𝙈", 3: "🔴 𝙃𝙄𝙂𝙃", 4: "🟡 𝙉𝙊𝘽𝙀𝙇",
-        5: "🥵 𝙉𝙐𝘿𝙀𝙎", 6: "🔮 𝙇𝙄𝙈𝙄𝙏𝙀𝘿", 7: "💋 𝘾𝙊𝙎𝙋𝙇𝘼𝙔 [𝙇]",
-        8: "⚫️ [𝙓] 𝙑𝙚𝙧𝙨𝙚", 9: "🎭 𝙀𝙍𝙊𝙏𝙄𝘾", 10: "🍑 𝙎𝙪𝙡𝙩𝙧𝙮"
+        1: "⛩️ LOW", 2: "🍁 RARE", 3: "🔴 MEDIUM", 4: "🟡 HIGH",
+        5: "🥵 EROTIC", 6: "🔮 𝙇𝙄𝙈𝙄𝙏𝙀𝘿", 7: "🎐 CELESTIAL",
+        8: "🧬 [X] VERSE", 9: "🌤️ SUMMER", 10: "💝 VALENTINE"
     }
 
     try:
@@ -137,9 +137,9 @@ async def update(update: Update, context: CallbackContext) -> None:
         new_value = new_value.replace('-', ' ').title()
     elif field == 'rarity':
         rarity_map = {
-            1: "🔵 𝙇𝙊𝙒", 2: "🟢 𝙈𝙀𝘿𝙄𝙐𝙈", 3: "🔴 𝙃𝙄𝙂𝙃", 4: "🟡 𝙉𝙊𝘽𝙀𝙇",
-            5: "🥵 𝙉𝙐𝘿𝙀𝙎", 6: "🔮 𝙇𝙄𝙈𝙄𝙏𝙀𝘿", 7: "💋 𝘾𝙊𝙎𝙋𝙇𝘼𝙔 [𝙇]",
-            8: "⚫️ [𝙓] 𝙑𝙚𝙧𝙨𝙚", 9: "🎭 𝙀𝙍𝙊𝙏𝙄𝘾", 10: "🍑 𝙎𝙪𝙡𝙩𝙧𝙮"
+            1: "⛩️ LOW", 2: "🍁 RARE", 3: "🔴 MEDIUM", 4: "🟡 HIGH",
+            5: "🥵 EROTIC", 6: "🔮 𝙇𝙄𝙈𝙄𝙏𝙀𝘿", 7: "🎐 CELESTIAL ",
+            8: "🧬 [X] VERSE", 9: "🌤️ SUMMER", 10: "💝 VALENTINE"
         }
         try:
             new_value = rarity_map[int(new_value)]
