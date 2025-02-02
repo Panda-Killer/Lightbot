@@ -96,29 +96,29 @@ async def set_rarity_percentages(chat_id, percentages):
 
 
 rarity_active = {
-    "🔵 𝙇𝙊𝙒": True,
-    "🟢 𝙈𝙀𝘿𝙄𝙐𝙈": True,
-    "🔴 𝙃𝙄𝙂𝙃": True,
-    "🟡 𝙉𝙊𝘽𝙀𝙇": True,
-    "🥵 𝙉𝙐𝘿𝙀𝙎": True,
+    "⛩️ LOW": True,
+    "🍁 RARE": True,
+    "🔴 MEDIUM": True,
+    "🟡 HIGH": True,
+    "🥵 EROTIC": True,
     "🔮 𝙇𝙄𝙈𝙄𝙏𝙀𝘿": True,
-    "💋 𝘾𝙊𝙎𝙋𝙇𝘼𝙔 [𝙇]": True,
-    "⚫️ [𝙓] 𝙑𝙚𝙧𝙨𝙚": True,
-    "🎭 𝙀𝙍𝙊𝙏𝙄𝘾": True,
-    "🍑 𝙎𝙪𝙡𝙩𝙧𝙮": True
+    "🎐 CELESTIAL ": True,
+    "🧬 [X] VERSE": True,
+    "🌤️ SUMMER": True,
+    "💝 VALENTINE": True
 }
 # Map numbers to rarity strings
 rarity_map = {
-    1: "🔵 𝙇𝙊𝙒",
-    2: "🟢 𝙈𝙀𝘿𝙄𝙐𝙈",
-    3: "🔴 𝙃𝙄𝙂𝙃",
-    4: "🟡 𝙉𝙊𝘽𝙀𝙇",
-    5: "🥵 𝙉𝙐𝘿𝙀𝙎",
+    1: "⛩️ LOW",
+    2: "🍁 RARE",
+    3: "🔴 MEDIUM",
+    4: "🟡 HIGH",
+    5: "🥵 EROTIC",
     6: "🔮 𝙇𝙄𝙈𝙄𝙏𝙀𝘿",
-    7: "💋 𝘾𝙊𝙎𝙋𝙇𝘼𝙔 [𝙇]",
-    8: "⚫️ [𝙓] 𝙑𝙚𝙧𝙨𝙚",
-    9: "🎭 𝙀𝙍𝙊𝙏𝙄𝘾",
-    10: "🍑 𝙎𝙪𝙡𝙩𝙧𝙮"
+    7: "🎐 CELESTIAL",
+    8: "🧬 [X] VERSE",
+    9: "🌤️ SUMMER",
+    10: "💝 VALENTINE"
 }
 # Command to turn a rarity on
 async def set_on(update: Update, context: CallbackContext) -> None:
@@ -170,31 +170,31 @@ async def send_image(update: Update, context: CallbackContext) -> None:
         sent_characters[chat_id] = []
 
     # Set rarity percentages based on chat ID
-    if chat_id == -1002041586214:
+    if chat_id == -1002147955274
         rarity_percentages = {
-            "🔵 𝙇𝙊𝙒": 50,
-            "🟢 𝙈𝙀𝘿𝙄𝙐𝙈": 40,
-            "🔴 𝙃𝙄𝙂𝙃": 30,
-            "🟡 𝙉𝙊𝘽𝙀𝙇": 40,
-            "🥵 𝙉𝙐𝘿𝙀𝙎": 0.1,
-            "🔮 𝙇𝙄𝙈𝙄𝙏𝙀𝘿": 0.1,
-            "💋 𝘾𝙊𝙎𝙋𝙇𝘼𝙔 [𝙇]": 0.1,
-            "⚫️ [𝙓] 𝙑𝙚𝙧𝙨𝙚": 10,
-            "🎭 𝙀𝙍𝙊𝙏𝙄𝘾": 0.1,
-            "🍑 𝙎𝙪𝙡𝙩𝙧𝙮": 0
+            "⛩️ LOW": 50,
+            "🍁 RARE": 40,
+            "🔴 MEDIUM": 30,
+            "🟡 HIGH": 40,
+            "🥵 EROTIC": 0.1,
+            "🔮 LIMITED": 0.1,
+            "🎐 CELESTIAL": 0.1,
+            "🧬 [X] VERSE": 10,
+            "🌤️ SUMMER": 0.1,
+            "💝 VALENTINE": 0
         }
     else:
         rarity_percentages = {
-            "🔵 𝙇𝙊𝙒": 50,
-            "🟢 𝙈𝙀𝘿𝙄𝙐𝙈": 40,
-            "🔴 𝙃𝙄𝙂𝙃": 30,
-            "🟡 𝙉𝙊𝘽𝙀𝙇": 1,
-            "🥵 𝙉𝙐𝘿𝙀𝙎": 0,
-            "🔮 𝙇𝙄𝙈𝙄𝙏𝙀𝘿": 0,
-            "💋 𝘾𝙊𝙎𝙋𝙇𝘼𝙔 [𝙇]": 0,
-            "⚫️ [𝙓] 𝙑𝙚𝙧𝙨𝙚": 1,
-            "🎭 𝙀𝙍𝙊𝙏𝙄𝘾": 0,
-            "🍑 𝙎𝙪𝙡𝙩𝙧𝙮": 0
+            "⛩️ LOW": 50,
+            "🍁 RARE": 40,
+            "🔴 MEDIUM": 30,
+            "🟡 HIGH": 1,
+            "🥵 EROTIC": 0,
+            "🔮 LIMITED": 0,
+            "🎐 CELESTIAL": 0,
+            "🧬 [X] VERSE": 1,
+            "🌤️ SUMMER": 0,
+            "💝 VALENTINE": 0
         }
 
     multiplier = 100
